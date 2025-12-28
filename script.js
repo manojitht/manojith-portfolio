@@ -99,3 +99,41 @@ window.onclick = function(event) {
         contactModal.style.display = "none";
     }
 }
+
+
+// --- CLASSIFIED DOSSIER FUNCTIONS ---
+const classifiedModal = document.getElementById("classified-modal");
+const decryptionOverlay = document.getElementById("decryption-overlay");
+const dossierContent = document.getElementById("dossier-content");
+const progressFill = document.querySelector(".progress-fill");
+
+function openClassifiedModal() {
+    classifiedModal.style.display = "block";
+    
+    // Reset Animation state
+    decryptionOverlay.style.display = "flex";
+    dossierContent.style.display = "none";
+    progressFill.style.width = "0%";
+
+    // START DECRYPTION SEQUENCE
+    setTimeout(() => {
+        progressFill.style.width = "100%"; // Fill bar
+    }, 100);
+
+    setTimeout(() => {
+        // Hide Loader, Show Content after 2 seconds
+        decryptionOverlay.style.display = "none";
+        dossierContent.style.display = "block";
+    }, 2000);
+}
+
+function closeClassifiedModal() {
+    classifiedModal.style.display = "none";
+}
+
+// Update window click to close this new modal too
+window.addEventListener("click", function(event) {
+    if (event.target == classifiedModal) {
+        classifiedModal.style.display = "none";
+    }
+});
