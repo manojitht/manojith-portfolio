@@ -37,7 +37,7 @@
             
             <div class="cta-group">
                 <a href="javascript:void(0)" class="btn btn-primary" onclick="openContactModal()">INITIALIZE CONTACT</a>
-                <a href="assets/files/Manojith Thiyageswarakumar - Resume.pdf" class="btn btn-secondary" download>DOWNLOAD DATA [RESUME]</a>
+                <a href="javascript:void(0)" class="btn btn-secondary" onclick="openClassifiedModal()">ACCESS MY DOSSIER</a>
             </div>
 
             <div class="awards-ticker">
@@ -256,7 +256,7 @@
 
             <div class="project-card">
                 <div class="card-header">
-                    <h3><i class="fas fa-user"></i> MediApp</h3>
+                    <h3><i class="fas fa-user"></i> MEDI-APP</h3>
                 </div>
                 <p>An android mobile based medical e-commerce management system & admin panel with web app, real-time data synchronization with analytics.</p>
                 <div class="tags">
@@ -386,6 +386,54 @@
         </div>
     </section> -->
 
+    <div id="classified-modal" class="modal">
+        <div class="modal-content dossier-box">
+            <span class="close-modal" onclick="closeClassifiedModal()">&times;</span>
+            
+            <div id="decryption-overlay">
+                <div class="loader-text">> DECRYPTING SECURE FILES...</div>
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+                <div class="matrix-code">-- ACCESS GRANTED --</div>
+            </div>
+
+            <div id="dossier-content" style="display: none;">
+                <h2 class="dossier-title">MY DOSSIER</h2>
+                
+                <div class="dossier-grid">
+                    <div class="fact-card">
+                        <i class="fas fa-coffee green-text"></i>
+                        <h3>FUEL CONSUMPTION</h3>
+                        <p>1-2 Cups of Coffee / Day</p>
+                    </div>
+
+                    <div class="fact-card">
+                        <i class="fas fa-gamepad green-text"></i>
+                        <h3>DOWNTIME ACTIVITY</h3>
+                        <p>Day Dreaming</p>
+                    </div>
+
+                    <div class="fact-card">
+                        <i class="fas fa-user green-text"></i>
+                        <h3>HUMANOID AGE</h3>
+                        <p>25 YRS</p>
+                    </div>
+
+                    <div class="fact-card">
+                        <i class="fas fa-globe-asia green-text"></i>
+                        <h3>ORIGIN POINT</h3>
+                        <p>Colombo, Sri Lanka</p>
+                    </div>
+                </div>
+
+                <div class="dossier-footer">
+                    <p>> SOCIAL LINKS:</p>
+                    <a href="https://github.com/manojitht" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> GITHUB</a>
+                    <a href="https://linkedin.com/in/manojith-thiyageswarakumar-25125b170" target="_blank" class="btn btn-primary"><i class="fab fa-linkedin"></i> LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="cert-modal" class="modal">
         <span class="close-modal" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modal-img">
@@ -415,10 +463,9 @@
 
     <footer id="contact">
         <div class="footer-content">
-            <h2>> PING MANOJITH ...</h2>
-            <div class="social-links">
-                <a href="https://github.com/manojitht" target="_blank"><i class="fab fa-github"></i> GITHUB</a>
-                <a href="https://linkedin.com/in/manojith-thiyageswarakumar-25125b170" target="_blank"><i class="fab fa-linkedin"></i> LINKEDIN</a>
+            <h2>> MY RESUME...</h2>
+            <div class="resume-link">
+                <a href="Manojith Thiyageswarakumar - Resume.pdf" download> DOWNLOAD RESUME</a>
             </div>
             <p class="copyright">DESIGNED & DEVELOPED BY MANOJITH THIYAGESWARAKUMAR.</p>
         </div>
@@ -427,3 +474,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
